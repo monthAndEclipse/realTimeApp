@@ -1,0 +1,23 @@
+{
+  "name": "realtimeapp",
+  "version": "1.0.0",
+  "description": "a real time application using nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monthAndEclipse/realTimeApp.git"
+  },
+  "keywords": [
+    "realtime",
+    "chatroom"
+  ],
+  "author": "lg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monthAndEclipse/realTimeApp/issues"
+  },
+  "homepage": "https://github.com/monthAndEclipse/realTimeApp#readme"
+}
