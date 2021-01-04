@@ -1,5 +1,5 @@
 (function(){
-    let socket = io.connect('http://localhost:3000/');
+    let socket = io.connect(env.remote_address||"http://119.23.19.189:3000/");
     let message = document.querySelector('#message');
     let messageBtn = document.querySelector('#messageBtn');
     let messageList = document.querySelector('#message-list')
