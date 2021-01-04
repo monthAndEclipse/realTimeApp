@@ -1,2 +1,5 @@
-# realTimeApp
-a real time applicaion using nodejs
+# realTimeApp(for learning purpose)
+a real time chatroom applicaion using nodejs
+
+
+

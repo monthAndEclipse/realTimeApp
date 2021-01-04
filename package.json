@@ -4,7 +4,8 @@
   "description": "a real time application using nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "nodemon index.js",
+    "test": "nodemon index.js"
   },
   "repository": {
     "type": "git",
