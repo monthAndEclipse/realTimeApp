@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/monthAndEclipse/realTimeApp/issues"
   },
-  "homepage": "https://github.com/monthAndEclipse/realTimeApp#readme"
+  "homepage": "https://github.com/monthAndEclipse/realTimeApp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^3.0.4"
+  }
 }

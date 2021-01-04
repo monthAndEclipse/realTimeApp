@@ -1,7 +1,8 @@
 FROM node:15.5.0-alpine3.11
-WORKDIR /
-COPY ./shell.sh /
-CMD   ["/shell.sh"]
-COPY ./*/* /chatRoomApp/
+# Create app directory
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY ./*/* ./
 EXPOSE 3000 
-ENTRYPOINT [ "node" ,"/chatRoomApp/index.js" ] 
+CMD [ "node" ,"index.js" ] 
