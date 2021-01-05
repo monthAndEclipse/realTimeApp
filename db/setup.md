@@ -1,31 +1,56 @@
-#create network : docker network create nodejs 
 
-#page:https://hub.docker.com/_/mongo
-#use tag :3.6.21-xenial
-#sotre data : create directory on host file system (mkdir /lg/mongo/data) 
-#setup authentication: -e MONGO_INITDB_ROOT_USERNAME=yourname , -e MONGO_INITDB_ROOT_PASSWORD=yourpwd 
+# docker host env
+#### create network : 
+```````````````
+docker network create nodejs 
+```````````````
 
 
-#pull :
+# mongodb
+#### use tag :
+```````````````
+3.6.21-xenial
+```````````````
+#### sotre data : 
+create directory on host file system to persist the data
+```````````````
+mkdir /lg/mongo/data
+``````````````` 
+#### setup authentication: 
+```````````````
+-e MONGO_INITDB_ROOT_USERNAME=yourname 
+-e MONGO_INITDB_ROOT_PASSWORD=yourpwd 
+```````````````
+
+#### pull :
+```````````````
 docker pull mongo:3.6.21-xenial
-#run :
+```````````````
+#### run :
+```````````````
 docker run -p 27017:27017 -v /lg/mongo/data:/data/db -d --network nodejs --name mongoose \
     -e MONGO_INITDB_ROOT_USERNAME=yourname \
     -e MONGO_INITDB_ROOT_PASSWORD=yourpwd \
     mongo:3.6.21-xenial
+```````````````
 
-#access
+#### access
+```````````````
 docker exec -it some-mongo bash
 mongo -u yourname -p yourpwd
+```````````````
+#### connect:mongo-express(docker)
 
-`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
 
-#connect:use mongo-express(docker) (https://hub.docker.com/_/mongo-express)
-#use tag : latest
-#pull :
+# mongo-express
+#### use tag : latest
+#### pull :
+```````````````
 docker pull mongo-express:latest
+```````````````
 
-#run 
+#### run 
+```````````````
 docker run -it -d --rm \
     --network nodejs \
     --name mongo-express \
@@ -37,8 +62,9 @@ docker run -it -d --rm \
     -e ME_CONFIG_MONGODB_ADMINUSERNAME="yourDBname" \
     -e ME_CONFIG_MONGODB_ADMINPASSWORD="yourDBpwd" \
     mongo-express
-
-#config
+```````````````
+#### config
+```````````````
 Name                            | Default         | Description
 --------------------------------|-----------------|------------
 ME_CONFIG_BASICAUTH_USERNAME    | ''              | mongo-express web username
@@ -63,7 +89,10 @@ Name                            | Default         | Description
 ME_CONFIG_MONGODB_AUTH_DATABASE | 'db'            | Database name
 ME_CONFIG_MONGODB_AUTH_USERNAME | 'admin'         | Database username
 ME_CONFIG_MONGODB_AUTH_PASSWORD | 'pass'          | Database password
+```````````````
+#### access: http://ip:8081/
 
-#access: http://ip:8081/
+#### done
 
-#done
+##### [referenced page - mongo - docker](https://hub.docker.com/_/mongo)
+##### [referenced page - mongo-express - docker](https://hub.docker.com/_/mongo-express)
