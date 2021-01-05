@@ -23,6 +23,7 @@
   "homepage": "https://github.com/monthAndEclipse/realTimeApp#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^3.6.3",
     "socket.io": "^3.0.4"
   }
 }
