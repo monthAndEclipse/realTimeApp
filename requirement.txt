@@ -5,7 +5,7 @@
 */
 
 npm install express socket.io --save
-npm install express nodemon --save-dev
+npm install nodemon --save-dev
 
 /** client side
 * socket.io#3.0.4
